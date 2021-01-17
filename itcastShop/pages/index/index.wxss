@@ -1,0 +1,24 @@
+/**index.wxss**/
+SearchInput {
+  width: 100%;
+}
+
+swiper{
+  width: 750rpx;
+  height: 340rpx;
+}
+
+.index_swiper navigator image {
+  width: 100%;
+}
+.index_cates{
+  width: 100%;
+  display: flex;
+}
+.index_cates navigator{
+  padding: 20rpx;
+  flex: 1;
+}
+.index_cates navigator image{
+  width: 100%;
+}

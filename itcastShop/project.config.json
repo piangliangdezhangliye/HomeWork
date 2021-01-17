@@ -39,9 +39,9 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.14.1",
+  "libVersion": "2.14.3",
   "appid": "wx440a57f43910908e",
-  "projectname": "HelloBase",
+  "projectname": "itcastShop",
   "debugOptions": {
     "hidedInDevtools": []
   },
