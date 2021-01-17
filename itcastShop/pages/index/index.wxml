@@ -18,4 +18,13 @@
       <image mode="widthFix" src="{{item.image_src}}"></image>
     </navigator>
   </view>
+  <!-- 楼层 -->
+  <view class="index_floor" wx:for="{{floorList}}">
+    <image mode="widthFix" src="{{item.floor_title.image_src}}"></image>
+    <view class="index_floor_img">
+      <navigator wx:for="{{item.product_list}}" wx:for-index="index">
+      <image mode="{{index==0?'widthFix':'scaleToFill'}}" src="{{item.image_src}}"></image>
+    </navigator>
+    </view>
+  </view>
 </view>

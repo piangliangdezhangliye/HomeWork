@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索 -->
+  <SearchInput></SearchInput>
+  <!-- 列表信息 -->
+  <view class="goods_list" wx:for="{{goodsList}}">
+    <navigator class="goods_list_img" url="/pages/goods_ detail/index?goods_id={{item.goods_id}}">
+      <image  src="{{item.goods_small_logo}}"></image>
+    </navigator>
+    <view class="goods_list_content">
+      <text class="goods_list_title">{{item.goods_name}}</text>
+      <text class="goods_list_pic">￥ {{item.goods_price}}</text>
+    </view>
+  </view>
+</view>

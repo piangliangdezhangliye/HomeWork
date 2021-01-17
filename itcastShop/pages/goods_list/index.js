@@ -6,40 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    swiperList:[],
-    catesList:[],
-    floorList:[]
+    goodsList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options); 
     var that=this
     // 轮播
     wx.request({
-      url: 'https://www.uinav.com/api/public/v1/home/swiperdata',
+      url: 'https://www.uinav.com/api/public/v1/goods/search',
+      data:options,
       success:function(result){
         that.setData({
-          swiperList:result.data.message
-        })
-      }
-    })
-    // 导航
-    wx.request({
-      url: 'https://www.uinav.com/api/public/v1/home/catitems',
-      success:function(result){
-        that.setData({
-          catesList:result.data.message
-        })
-      }
-    })
-    // 楼层
-    wx.request({
-      url: 'https://www.uinav.com/api/public/v1/home/floordata',
-      success:function(result){
-        that.setData({
-          floorList:result.data.message
+          goodsList:result.data.message.goods
         })
       }
     })

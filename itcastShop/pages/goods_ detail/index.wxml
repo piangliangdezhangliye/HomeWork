@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <view class="index_swiper">
+    <swiper indicator-dots autoplay circular>
+      <swiper-item wx:for="{{detailData.pics}}">
+        <navigator>
+          <image mode="widthFix" src="{{item.pics_mid}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="goods_detail_pri">￥ {{detailData.goods_price}}</view>
+  <view class="goods_detail">
+    <view class="goods_name">{{detailData.goods_name}}</view>
+    <view class="goods_collect">
+      <!-- <mp-icon icon="star"></mp-icon> -->
+      <text class="iconfont icon-shoucang"></text>
+      <view class="collect_text">收藏</view>
+    </view>
+  </view>
+  <!-- 图文 -->
+  <view class="goods_info">
+    <view class="goods_info_title">图文详情</view>
+    <view class="goods_info-content">
+      <rich-text nodes="{{detailData.goods_introduce}}"></rich-text>
+    </view>
+  </view>
+</view>

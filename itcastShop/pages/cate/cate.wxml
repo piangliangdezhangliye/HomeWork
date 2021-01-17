@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+ <!-- 搜索 -->
+ <SearchInput></SearchInput>
+ <!-- 内容 -->
+ <view class="cate_content">
+   <!-- 左侧 -->
+   <scroll-view scroll-y class="left_meun">
+     <view wx:for="{{leftMeunList}}" wx:for-index="index" wx:key="cat_id" bindtap="handleClickTap" data-index="{{index}}">{{item.cat_name}}</view>
+   </scroll-view>
+   <!-- 右侧 -->
+   <scroll-view scroll-y class="right_content">
+     <view class="right_content" wx:for="{{rightConList}}" wx:key="cat_id">
+       <view class="goods_title">/{{item.cat_name}}/</view>
+         <navigator class="goods_list" wx:for="{{item.children}}" wx:for-item="item2" wx:key="cat_id" url="/pages/goods_list/index?cid={{item2.cat_id}}">
+           <image mode="widthFix" src="{{item2.cat_icon}}"></image>
+           <view>{{item2.cat_name}}</view>
+         </navigator>
+     </view>
+   </scroll-view>
+ </view>
+</view>
